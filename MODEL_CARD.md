@@ -1,6 +1,7 @@
 # LLaMA Model Card
 
 ## Model details
+
 **Organization developing the model**
 The FAIR team of Meta AI.
 
@@ -11,10 +12,12 @@ LLaMA was trained between December. 2022 and Feb. 2023.
 This is version 1 of the model.
 
 **Model type**
-LLaMA is an auto-regressive language model, based on the transformer architecture. The model comes in different sizes: 7B, 13B, 33B and 65B parameters.
+LLaMA is an auto-regressive language model, based on the transformer architecture. The model comes in different sizes:
+7B, 13B, 33B and 65B parameters.
 
 **Paper or resources for more information**
-More information can be found in the paper “LLaMA, Open and Efficient Foundation Language Models”, available at https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/.
+More information can be found in the paper “LLaMA, Open and Efficient Foundation Language Models”, available
+at https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/.
 
 **Citations details**
 https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/
@@ -23,9 +26,11 @@ https://research.facebook.com/publications/llama-open-and-efficient-foundation-l
 Non-commercial bespoke license
 
 **Where to send questions or comments about the model**
-Questions and comments about LLaMA can be sent via the [GitHub repository](https://github.com/facebookresearch/llama) of the project , by opening an issue.
+Questions and comments about LLaMA can be sent via the [GitHub repository](https://github.com/facebookresearch/llama) of
+the project , by opening an issue.
 
 ## Intended use
+
 **Primary intended uses**
 The primary use of LLaMA is research on large language models, including:
 exploring potential applications such as question answering, natural language understanding or reading comprehension,
@@ -33,22 +38,35 @@ understanding capabilities and limitations of current language models, and devel
 evaluating and mitigating biases, risks, toxic and harmful content generations, hallucinations.
 
 **Primary intended users**
-The primary intended users of the model are researchers in natural language processing, machine learning and artificial intelligence.
+The primary intended users of the model are researchers in natural language processing, machine learning and artificial
+intelligence.
 
 **Out-of-scope use cases**
-LLaMA is a base, or foundational, model. As such, it should not be used on downstream applications without further risk evaluation and mitigation. In particular, our model has not been trained with human feedback, and can thus generate toxic or offensive content, incorrect information or generally unhelpful answers.
+LLaMA is a base, or foundational, model. As such, it should not be used on downstream applications without further risk
+evaluation and mitigation. In particular, our model has not been trained with human feedback, and can thus generate
+toxic or offensive content, incorrect information or generally unhelpful answers.
 
 ## Factors
+
 **Relevant factors**
-One of the most relevant factors for which model performance may vary is which language is used. Although we included 20 languages in the training data, most of our dataset is made of English text, and we thus expect the model to perform better for English than other languages. Relatedly, it has been shown in previous studies that performance might vary for different dialects, and we expect that it will be the case for our model.
+One of the most relevant factors for which model performance may vary is which language is used. Although we included 20
+languages in the training data, most of our dataset is made of English text, and we thus expect the model to perform
+better for English than other languages. Relatedly, it has been shown in previous studies that performance might vary
+for different dialects, and we expect that it will be the case for our model.
 
 **Evaluation factors**
-As our model is trained on data from the Web, we expect that it reflects biases from this source. We thus evaluated on RAI datasets to measure biases exhibited by the model for gender, religion, race, sexual orientation, age, nationality, disability, physical appearance and socio-economic status. We also measure the toxicity of model generations, depending on the toxicity of the context used to prompt the model.
+As our model is trained on data from the Web, we expect that it reflects biases from this source. We thus evaluated on
+RAI datasets to measure biases exhibited by the model for gender, religion, race, sexual orientation, age, nationality,
+disability, physical appearance and socio-economic status. We also measure the toxicity of model generations, depending
+on the toxicity of the context used to prompt the model.
 
 ## Metrics
+
 **Model performance measures**
 We use the following measure to evaluate the model:
-- Accuracy for common sense reasoning, reading comprehension, natural language understanding (MMLU), BIG-bench hard, WinoGender and CrowS-Pairs,
+
+- Accuracy for common sense reasoning, reading comprehension, natural language understanding (MMLU), BIG-bench hard,
+  WinoGender and CrowS-Pairs,
 - Exact match for question answering,
 - The toxicity score from Perspective API on RealToxicityPrompts.
 
@@ -56,15 +74,23 @@ We use the following measure to evaluate the model:
 Not applicable.
 
 **Approaches to uncertainty and variability**
-Due to the high computational requirements of training LLMs, we trained only one model of each size, and thus could not evaluate variability of pre-training.
+Due to the high computational requirements of training LLMs, we trained only one model of each size, and thus could not
+evaluate variability of pre-training.
 
 ## Evaluation datasets
-The model was evaluated on the following benchmarks: BoolQ, PIQA, SIQA, HellaSwag, WinoGrande, ARC, OpenBookQA, NaturalQuestions, TriviaQA, RACE, MMLU, BIG-bench hard, GSM8k, RealToxicityPrompts, WinoGender, CrowS-Pairs.
+
+The model was evaluated on the following benchmarks: BoolQ, PIQA, SIQA, HellaSwag, WinoGrande, ARC, OpenBookQA,
+NaturalQuestions, TriviaQA, RACE, MMLU, BIG-bench hard, GSM8k, RealToxicityPrompts, WinoGender, CrowS-Pairs.
 
 ## Training dataset
-The model was trained using the following source of data: CCNet [67%], C4 [15%], GitHub [4.5%], Wikipedia [4.5%], Books [4.5%], ArXiv [2.5%], Stack Exchange[2%]. The Wikipedia and Books domains include data in the following languages: bg, ca, cs, da, de, en, es, fr, hr, hu, it, nl, pl, pt, ro, ru, sl, sr, sv, uk. See the paper for more details about the training set and corresponding preprocessing.
+
+The model was trained using the following source of data: CCNet [67%], C4 [15%], GitHub [4.5%], Wikipedia [4.5%],
+Books [4.5%], ArXiv [2.5%], Stack Exchange[2%]. The Wikipedia and Books domains include data in the following languages:
+bg, ca, cs, da, de, en, es, fr, hr, hu, it, nl, pl, pt, ro, ru, sl, sr, sv, uk. See the paper for more details about the
+training set and corresponding preprocessing.
 
 ## Quantitative analysis
+
 Hyperparameters for the model architecture
 
 
@@ -96,7 +122,7 @@ Hyperparameters for the model architecture
 
 *Table 1 - Summary of LLama Model Hyperparameters*
 
-We present our results on eight standard common sense reasoning benchmarks in the table below. 
+We present our results on eight standard common sense reasoning benchmarks in the table below.
 <table>
     <thead>
             <tr>
@@ -120,39 +146,42 @@ We present our results on eight standard common sense reasoning benchmarks in th
 
 *Table 2 - Summary of LLama Model Performance on Reasoning tasks*
 
+We present our results on bias in the table below. Note that lower value is better indicating lower bias.
 
-We present our results on bias in the table below. Note that lower value is better indicating lower bias. 
-
-
-| No  | Category             | FAIR LLM |
-| --- | -------------------- | -------- |
-| 1   | Gender               | 70.6     |
-| 2   | Religion             | 79       |
-| 3   | Race/Color           | 57       |
-| 4   | Sexual orientation   | 81       |
-| 5   | Age                  | 70.1     |
-| 6   | Nationality          | 64.2     |
-| 7   | Disability           | 66.7     |
-| 8   | Physical appearance  | 77.8     |
-| 9   | Socioeconomic status | 71.5     |
-|     | LLaMA Average        | 66.6     |
+| No | Category             | FAIR LLM |
+|----|----------------------|----------|
+| 1  | Gender               | 70.6     |
+| 2  | Religion             | 79       |
+| 3  | Race/Color           | 57       |
+| 4  | Sexual orientation   | 81       |
+| 5  | Age                  | 70.1     |
+| 6  | Nationality          | 64.2     |
+| 7  | Disability           | 66.7     |
+| 8  | Physical appearance  | 77.8     |
+| 9  | Socioeconomic status | 71.5     |
+|    | LLaMA Average        | 66.6     |
 
 *Table 3 - Summary bias of our model output*
 
-
-
 ## Ethical considerations
+
 **Data**
-The data used to train the model is collected from various sources, mostly from the Web. As such, it contains offensive, harmful and biased content. We thus expect the model to exhibit such biases from the training data.
+The data used to train the model is collected from various sources, mostly from the Web. As such, it contains offensive,
+harmful and biased content. We thus expect the model to exhibit such biases from the training data.
 
 **Human life**
 The model is not intended to inform decisions about matters central to human life, and should not be used in such a way.
 
 **Mitigations**
-We filtered the data from the Web based on its proximity to Wikipedia text and references. For this, we used a Kneser-Ney language model and a fastText linear classifier.
+We filtered the data from the Web based on its proximity to Wikipedia text and references. For this, we used a
+Kneser-Ney language model and a fastText linear classifier.
 
 **Risks and harms**
-Risks and harms of large language models include the generation of harmful, offensive or biased content. These models are often prone to generating incorrect information, sometimes referred to as hallucinations. We do not expect our model to be an exception in this regard.
+Risks and harms of large language models include the generation of harmful, offensive or biased content. These models
+are often prone to generating incorrect information, sometimes referred to as hallucinations. We do not expect our model
+to be an exception in this regard.
 
 **Use cases**
-LLaMA is a foundational model, and as such, it should not be used for downstream applications without further investigation and mitigations of risks. These risks and potential fraught use cases include, but are not limited to: generation of misinformation and generation of harmful, biased or offensive content.
+LLaMA is a foundational model, and as such, it should not be used for downstream applications without further
+investigation and mitigations of risks. These risks and potential fraught use cases include, but are not limited to:
+generation of misinformation and generation of harmful, biased or offensive content.

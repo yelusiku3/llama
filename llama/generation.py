@@ -15,11 +15,11 @@ class LLaMA:
         self.tokenizer = tokenizer
 
     def generate(
-        self,
-        prompts: List[str],
-        max_gen_len: int,
-        temperature: float = 0.8,
-        top_p: float = 0.95,
+            self,
+            prompts: List[str],
+            max_gen_len: int,
+            temperature: float = 0.8,
+            top_p: float = 0.95,
     ) -> List[str]:
         bsz = len(prompts)
         params = self.model.params
